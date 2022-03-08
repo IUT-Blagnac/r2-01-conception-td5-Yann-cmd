@@ -1,0 +1,27 @@
+@startuml issue1
+
+
+usecase c as "Gérer ses chantiers"
+usecase g as "Gérer ses artisans"
+usecase a as "Affectation des artisans"
+usecase p as "Calculer salaire des artisans"
+
+actor Direction
+actor RessourcesHumaines
+actor Comptable
+
+'Pour aligner les 2 acteurs :
+a -[hidden]-> g
+p -[hidden]-> a
+
+Direction -> c
+Direction -> a
+
+RessourcesHumaines -> g
+
+
+Comptable -> p
+
+
+
+@enduml
